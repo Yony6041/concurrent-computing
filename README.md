@@ -39,6 +39,8 @@
 - [Test Assignments](#test-assignments)
 - [The Students team](#the-students-team)
     - [Yonathan Berith Jaramillo Ramírez.](#yonathan-berith-jaramillo-ramírez)
+    - [Diego Arturo Velázquez Trejo.](#diego-arturo-velázquez-trejo)
+    - [Marco Antonio García Arce.](#marco-antonio-garcía-arce)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -152,6 +154,8 @@ This is an example of how to list things you need to use the software and how to
  <img src="https://media.tenor.com/vHi81kJ7ad0AAAAM/homework-time.gif" width="500px">
 </div>
 
+The homeworks can be found in the directory "homework"
+
 ## Practice 1
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,7 +167,7 @@ This is an example of how to list things you need to use the software and how to
 
 # Test Assignments
 
-The tests pdfs can be found at exams/exam(x).pdf
+The tests pdfs can be found at exams/exam(x)/exam(x).pdf
 
 
 # The Students team 
@@ -174,6 +178,15 @@ The tests pdfs can be found at exams/exam(x).pdf
 Computer scientist
 - [Github](https://github.com/Yony6041)
 - [LinkedIn](https://www.linkedin.com/in/yonathan-jaramillo-a506181a7/?originalSubdomain=mx)
+
+### Diego Arturo Velázquez Trejo.
+Computer scientist
+- [Github](https://github.com/DiegoArturoVelazquezTrejo)
+- [LinkedIn](https://mx.linkedin.com/in/diego-arturo-velazquez-trejo-32a4b8244)
+
+### Marco Antonio García Arce.
+Computer scientist
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
