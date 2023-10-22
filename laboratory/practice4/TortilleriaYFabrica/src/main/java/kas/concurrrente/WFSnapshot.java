@@ -33,13 +33,15 @@ public class WFSnapshot<T> implements Snapshot<T> {
                     break;
                 }
             }
-            if (clean) {
-                T[] result = (T[]) new Object[capacity];
-                for (int i = 0; i < capacity; i++) {
-                    result[i] = snaps[i].getValue();
-                }
-                return result;
-            }
+            
+    if (clean) {
+        T[] result = (T[]) new Object[capacity];
+        for (int i = 0; i < capacity; i++) {
+            result[i] = snaps[i].getValue();
+        }
+        System.out.println("Scan successful. Returning snapshot.");
+        return result;
+    }
         }
     }
 
