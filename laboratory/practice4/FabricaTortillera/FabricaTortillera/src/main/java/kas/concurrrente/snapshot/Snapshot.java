@@ -1,5 +1,6 @@
 package kas.concurrrente.snapshot;
 
+
 /**
  * Interfaz que modela un Snapshot
  * @author Kassandra Mirael
