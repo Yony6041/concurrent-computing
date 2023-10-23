@@ -9,13 +9,11 @@ public class TortilleriaStore implements Runnable {
 
     @Override
     public void run() {
-        // This method can be used to simulate customer interactions, inventory management, etc.
+        System.out.println("Running ...");
     }
 
     public void dispatchCustomer(int timestamp) {
-        // Implement your logic here to serve the customer based on the timestamp
-        // For example, you can check the snapshot to see how many tortillas are available
         Integer[] availableTortillas = snapshot.scan();
-        // ... (your dispatch logic here)
+        System.out.println("Dispatching ... ");
     }
 }
