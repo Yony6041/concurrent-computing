@@ -1,6 +1,7 @@
 package kas.concurrrente;
 import java.util.concurrent.atomic.AtomicStampedReference;
 import kas.concurrrente.snapshot.Snapshot;
+import kas.concurrrente.stamped.StampedSnap; 
 
 public class WFSnapshot<T> implements Snapshot<T> {
     private AtomicStampedReference<StampedSnap<T>>[] a_table;
@@ -46,8 +47,8 @@ public class WFSnapshot<T> implements Snapshot<T> {
 
     @Override
     public void update(T value) {
-        int me = ThreadID.get();
-        StampedSnap<T> newSnap = new StampedSnap<>(value);
-        a_table[me].set(newSnap, 0); // Assuming the stamp is not needed for this example
+        //int me = ThreadID.get();
+        //StampedSnap<T> newSnap = new StampedSnap<>(value);
+        //a_table[me].set(newSnap, 0); // Assuming the stamp is not needed for this example
     }
 }

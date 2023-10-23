@@ -11,7 +11,7 @@ public class Main {
         WFSnapshot<Integer> snapshot = new WFSnapshot<>(10, 0);
 
         TortilleriaFactory factory = new TortilleriaFactory(snapshot);
-        TortilleriaStore store = new TortilleriaStore(snapshot);
+        TortilleriaStore store = new TortilleriaStore(snapshot, 0);
 
         // Create threads for the factory and the store
         Thread factoryThread = new Thread(factory);
