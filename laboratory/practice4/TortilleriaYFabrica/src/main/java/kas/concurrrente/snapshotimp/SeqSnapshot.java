@@ -1,4 +1,4 @@
-package kas.concurrrente.snapshotImp;
+package kas.concurrrente.snapshotimp;
 
 import kas.concurrrente.snapshot.Snapshot;
 

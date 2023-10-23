@@ -1,6 +1,9 @@
+package kas.concurrrente;
+
 public class StampedSnap<T> {
     private T value;
     private long stamp;
+    private Object snap;
 
     
 

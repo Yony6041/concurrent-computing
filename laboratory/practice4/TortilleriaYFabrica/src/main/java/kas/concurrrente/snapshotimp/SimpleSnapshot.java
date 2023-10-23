@@ -1,10 +1,15 @@
-package kas.concurrrente.snapshotImp;
+package kas.concurrrente.snapshotimp;
 
 import java.util.Arrays;
 
 import kas.concurrrente.snapshot.Snapshot;
 import kas.concurrrente.stamped.StampedValue;
 
+/**
+ * Clase que implementa un Snapshot
+ * @author Kassandra Mirael
+ * @version 1.0
+ */
 public class SimpleSnapshot<T> implements Snapshot<T>{
     private StampedValue<T>[] aTable;
 

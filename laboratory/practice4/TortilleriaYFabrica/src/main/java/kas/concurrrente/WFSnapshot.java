@@ -1,7 +1,6 @@
+package kas.concurrrente;
 import java.util.concurrent.atomic.AtomicStampedReference;
 import kas.concurrrente.snapshot.Snapshot;
-
-
 
 public class WFSnapshot<T> implements Snapshot<T> {
     private AtomicStampedReference<StampedSnap<T>>[] a_table;
