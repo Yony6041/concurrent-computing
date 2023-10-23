@@ -10,18 +10,26 @@
 
     <dependencies>
         <!-- Tus dependencias aquí -->
+        
+        <!-- Dependencia para JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.0</version> <!-- Use la versión más reciente -->
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.0</version>
-            <configuration>
-                <source>11</source> <!-- Usa la versión de Java que tienes instalada -->
-                <target>11</target> <!-- Usa la versión de Java que tienes instalada -->
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>11</source> <!-- Usa la versión de Java que tienes instalada -->
+                    <target>11</target> <!-- Usa la versión de Java que tienes instalada -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

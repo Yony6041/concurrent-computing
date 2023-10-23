@@ -10,7 +10,6 @@ public class TortilleriaFactory implements Runnable {
     @Override
     public void run() {
         while (true) {
-            // Simulate the production of tortillas
             int producedTortillas = (int) (Math.random() * 10);  // Randomly produce up to 10 tortillas
             snapshot.update(producedTortillas);
 
