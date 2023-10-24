@@ -4,6 +4,7 @@ import kas.concurrente.modelos.Arista;
 import kas.concurrente.modelos.Grafica;
 import kas.concurrente.modelos.Vertice;
 import kas.concurrente.modelos.Chinche;
+import java.util.LinkedList;
 
 import java.util.Random;
 
@@ -17,40 +18,35 @@ public class Flooding {
 
     public void moverChinches() {
         Vertice[] vertices = grafo.getVertices();
-        for (Vertice vertice : vertices) {
-            // Suponiendo que Chinche es un tipo de Objeto, puedes obtener todos los objetos en un vértice y filtrar las chinches.
-            for (Objeto objeto : vertice.getObjetos()) {
-                if (objeto instanceof Chinche) {
-                    moverChinche(chinche, vertice);
-                }
-            }
-        }
+	for (Vertice vertice : vertices){
+		for (Chinche c : vertice.getChinches()){
+			moverChinche(c, vertice);
+		}
+	}
     }
 
     private void moverChinche(Chinche chinche, Vertice verticeActual) {
-        // Aquí necesitarás una manera de obtener las aristas salientes de un vértice. 
         // Esto podría requerir una modificación en tu clase Grafica o una función adicional.
-        Arista[] aristasSalientes = obtenerAristasSalientes(verticeActual);  
-        if (aristasSalientes.length > 0) {
-            Random random = new Random();
-            Arista aristaSeleccionada = aristasSalientes[random.nextInt(aristasSalientes.length)];
-            Vertice nuevoVertice = aristaSeleccionada.getVerticeDos();  // Asumiendo que verticeActual es verticeUno
 
-            verticeActual.objetos.remove(chinche);
-            nuevoVertice.agregarChinche(chinche);
+	LinkedList<Vertice> disponibles = new LinkedList<>();
+	for (Arista a : grafo.getAristas()){
+		if (a.getVerticeUno().equals(verticeActual))
+			disponibles.add(a.getVerticeDos());
+		else if (a.getVerticeDos().equals(verticeActual))
+			disponibles.add(a.getVerticeUno());
+	}
 
-            // Posibilidad de reproducción
-            if (random.nextDouble() < 0.33) {
-                Chinche nuevaChinche = new Chinche(10, 5);
-                nuevoVertice.agregarChinche(nuevaChinche);
-            }
-        }
+	if (disponibles.size() > 0){
+		Random random = new Random();
+		Vertice seleccion = disponibles.get(random.nextInt(disponibles.size()));
+		
+		verticeActual.eliminarChinche(chinche);
+		seleccion.agregarChinche(chinche);
+
+		if (random.nextDouble() < 0.33){
+			Chinche nuevoChinche = new Chinche(10, 5);
+			seleccion.agregarChinche(nuevoChinche);
+		}
+	}
     }
-
-    // Suponiendo que esta función pueda obtener las aristas salientes de un vértice.
-    private Arista[] obtenerAristasSalientes(Vertice vertice) {
-        // Implementar la lógica para obtener las aristas salientes.
-        // Esto podría requerir una modificación en tu clase Grafica o una función adicional.
-        return new Arista[0];  // Retorno dummy, reemplazar con la lógica apropiada.
-    }
-}
+} 
