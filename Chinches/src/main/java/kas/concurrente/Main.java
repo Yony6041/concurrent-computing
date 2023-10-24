@@ -4,6 +4,7 @@ import kas.concurrente.modelos.Vertice;
 
 /**
  * Clase Main
+ * Equipo: Estrella
  * Integrantes:
  * Marco Antonio Garcia Arce
  * Yonathan Berith Jaramillo Ramírez
@@ -26,11 +27,33 @@ public class Main {
             cu.agregaVertice(i, v); 
         }
 
-        cu = agregaAristas(cu);
+        agregaAristas(cu);
         
     }
 
     public static Grafica agregaAristas(Grafica g){
-        
+        g.agregaArista(new Arista(g.getVertices()[0], g.getVertices()[1]));
+        g.agregaArista(new Arista(g.getVertices()[0], g.getVertices()[5]));
+        g.agregaArista(new Arista(g.getVertices()[1], g.getVertices()[2]));
+        g.agregaArista(new Arista(g.getVertices()[2], g.getVertices()[3]));
+        g.agregaArista(new Arista(g.getVertices()[3], g.getVertices()[4]));
+        g.agregaArista(new Arista(g.getVertices()[4], g.getVertices()[10]));
+        g.agregaArista(new Arista(g.getVertices()[5], g.getVertices()[6]));
+        g.agregaArista(new Arista(g.getVertices()[5], g.getVertices()[7]));
+        g.agregaArista(new Arista(g.getVertices()[7], g.getVertices()[8]));
+        g.agregaArista(new Arista(g.getVertices()[7], g.getVertices()[19]));
+        g.agregaArista(new Arista(g.getVertices()[8], g.getVertices()[9]));
+        g.agregaArista(new Arista(g.getVertices()[9], g.getVertices()[10]));
+        g.agregaArista(new Arista(g.getVertices()[9], g.getVertices()[16]));
+        g.agregaArista(new Arista(g.getVertices()[10], g.getVertices()[11]));
+        g.agregaArista(new Arista(g.getVertices()[11], g.getVertices()[12]));
+        g.agregaArista(new Arista(g.getVertices()[12], g.getVertices()[13]));
+        g.agregaArista(new Arista(g.getVertices()[13], g.getVertices()[14]));
+        g.agregaArista(new Arista(g.getVertices()[14], g.getVertices()[15]));
+        g.agregaArista(new Arista(g.getVertices()[14], g.getVertices()[20]));
+        g.agregaArista(new Arista(g.getVertices()[15], g.getVertices()[16]));
+        g.agregaArista(new Arista(g.getVertices()[16], g.getVertices()[17]));
+        g.agregaArista(new Arista(g.getVertices()[17], g.getVertices()[18]));
+        g.agregaArista(new Arista(g.getVertices()[18], g.getVertices()[19]));
     }
 }

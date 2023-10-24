@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Chinche {
 
-    // Atributos que representan la vida y letalidad de la chinche.
+    /* Atributos que representan la vida y letalidad de la chinche. */
     protected AtomicInteger vida;
     protected int letalidad;
 

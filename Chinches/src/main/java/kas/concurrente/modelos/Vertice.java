@@ -9,7 +9,9 @@ public class Vertice {
 
     // Atributos que representan el vértice
     protected int id;
-    protected LinkedList<Objeto> objetos;
+    protected LinkedList<Arma> armas;
+    protected LinkedList<Chinche> chinches;
+    protected LinkedList<Persona> personas;
     protected String facultad;
 
     /**
@@ -34,12 +36,30 @@ public class Vertice {
     }
 
     /**
-     * Agrega un objeto al vértice.
+     * Agrega una persona al vértice.
      * 
-     * @param objeto Objeto a agregar al vértice.
+     * @param p Persona a agregar al vértice.
      */
-    public void agregarObjeto(Objeto objeto) {
-        objetos.add(objeto);
+    public void agregarPersona(Persona p) {
+        personas.add(p);
+    }
+
+    /**
+     * Agrega una chinche al vértice.
+     * 
+     * @param c Chinche a agregar al vértice.
+     */
+    public void agregarChinche(Chinche c) {
+        chinches.add(c);
+    }
+
+    /**
+     * Agrega un arma al vértice.
+     * 
+     * @param a Arma a agregar al vértice.
+     */
+    public void agregarPersona(Arma a) {
+        armas.add(a);
     }
 
     /**
@@ -49,9 +69,5 @@ public class Vertice {
      */
     public String getFacultad() {
         return facultad;
-    }
-
-    public LinkedList<Objeto> getObjetos(){
-        return objetos; 
     }
 }

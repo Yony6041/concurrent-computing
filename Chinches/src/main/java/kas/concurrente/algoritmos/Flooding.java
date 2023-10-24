@@ -4,7 +4,6 @@ import kas.concurrente.modelos.Arista;
 import kas.concurrente.modelos.Grafica;
 import kas.concurrente.modelos.Vertice;
 import kas.concurrente.modelos.Chinche;
-import kas.concurrente.modelos.Objeto;
 
 import java.util.Random;
 

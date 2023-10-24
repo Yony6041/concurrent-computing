@@ -10,7 +10,7 @@ import java.util.List;
  * 
  * Persona en la simulación.
  */
-public class Persona extends Objeto {
+public class Persona{
 
     // Atributos que representan la persona
     protected String nombre;
