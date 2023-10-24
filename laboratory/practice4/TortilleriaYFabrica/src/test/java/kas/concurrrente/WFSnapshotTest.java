@@ -13,7 +13,7 @@ public class WFSnapshotTest {
 
     @BeforeEach
     public void setup() {
-        snapshot = new WFSnapshot(10); // Suponiendo que 10 es el tamaño inicial
+        snapshot = new WFSnapshot(15, 10); // Suponiendo que 10 es el tamaño inicial
     }
 
     @Test
