@@ -1,11 +1,10 @@
-package kas.concurrente;
+package kas.concurrente.modelos;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Clase de los vertices
  */
-public class Chinche implements {
+public class Arma{
 
-    protected objeto;
 }
