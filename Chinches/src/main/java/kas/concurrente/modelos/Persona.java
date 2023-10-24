@@ -1,5 +1,6 @@
 package kas.concurrente.modelos;
 
+import kas.concurrente.modelos.Objeto; 
 import java.util.ArrayList;
 import java.util.List;
 

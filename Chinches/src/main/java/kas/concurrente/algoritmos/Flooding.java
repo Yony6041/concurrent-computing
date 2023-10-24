@@ -42,7 +42,7 @@ public class Flooding {
 
             // Posibilidad de reproducción
             if (random.nextDouble() < 0.33) {
-                Chinche nuevaChinche = new Chinche(10, 0.7);
+                Chinche nuevaChinche = new Chinche(10, 5);
                 nuevoVertice.agregarObjeto(nuevaChinche);
             }
         }
