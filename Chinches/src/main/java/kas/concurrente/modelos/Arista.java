@@ -8,6 +8,7 @@ public class Arista {
     // Atributos para los dos vértices conectados por la arista
     protected Vertice uno;
     protected Vertice dos;
+    protected int peso; 
 
     /**
      * Constructor de la clase Arista.
@@ -18,6 +19,7 @@ public class Arista {
     public Arista(Vertice uno, Vertice dos) {
         this.uno = uno;
         this.uno = dos;
+        this.peso = 0; 
     }
 
     /**
@@ -36,5 +38,9 @@ public class Arista {
      */
     public Vertice getVerticeDos() {
         return dos;
+    }
+
+    public int getPeso(){
+        return peso; 
     }
 }
