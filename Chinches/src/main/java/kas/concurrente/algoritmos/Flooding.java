@@ -21,7 +21,7 @@ public class Flooding {
             // Suponiendo que Chinche es un tipo de Objeto, puedes obtener todos los objetos en un vértice y filtrar las chinches.
             for (Objeto objeto : vertice.getObjetos()) {
                 if (objeto instanceof Chinche) {
-                    moverChinche((Chinche) objeto, vertice);
+                    moverChinche(chinche, vertice);
                 }
             }
         }
@@ -37,12 +37,12 @@ public class Flooding {
             Vertice nuevoVertice = aristaSeleccionada.getVerticeDos();  // Asumiendo que verticeActual es verticeUno
 
             verticeActual.objetos.remove(chinche);
-            nuevoVertice.agregarObjeto(chinche);
+            nuevoVertice.agregarChinche(chinche);
 
             // Posibilidad de reproducción
             if (random.nextDouble() < 0.33) {
                 Chinche nuevaChinche = new Chinche(10, 5);
-                nuevoVertice.agregarObjeto(nuevaChinche);
+                nuevoVertice.agregarChinche(nuevaChinche);
             }
         }
     }
