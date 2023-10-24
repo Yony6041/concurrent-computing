@@ -36,7 +36,7 @@ public class Routing {
             visitados.put(actual, true);
 
             for (Arista arista : grafo.obtenerAristasSalientes(actual)) {
-                Vertice vecino = arista.getDestino();
+                Vertice vecino = arista.getVerticeDos();
                 int nuevaDistancia = distancias.get(actual) + arista.getPeso();
                 if (nuevaDistancia < distancias.get(vecino)) {
                     distancias.put(vecino, nuevaDistancia);

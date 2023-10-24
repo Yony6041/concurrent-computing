@@ -26,7 +26,7 @@ public class Persona{
     public Persona(String nombre, int letalidad) {
         this.nombre = nombre;
         this.letalidad = letalidad;
-        this.objetos = new ArrayList<>();
+        this.armas = new ArrayList<Arma>();
         this.vida = 100;  // Asumiendo una vida inicial de 100
     }
 
@@ -44,8 +44,8 @@ public class Persona{
      * 
      * @param objeto Objeto a agregar.
      */
-    public void agregarObjeto(Object objeto) {
-        objetos.add(objeto);
+    public void agregarObjeto(Arma arma) {
+        armas.add(arma);
     }
 
     /**
