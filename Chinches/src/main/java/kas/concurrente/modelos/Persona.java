@@ -1,6 +1,5 @@
 package kas.concurrente.modelos;
 
-import kas.concurrente.modelos.Objeto; 
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ public class Persona{
 
     // Atributos que representan la persona
     protected String nombre;
-    protected List<Objeto> objetos;
+    protected ArrayList<Arma> armas;
     protected int letalidad;
     protected int vida;  // Asumiendo que una persona también tiene vida como una chinche
 
@@ -45,7 +44,7 @@ public class Persona{
      * 
      * @param objeto Objeto a agregar.
      */
-    public void agregarObjeto(Objeto objeto) {
+    public void agregarObjeto(Object objeto) {
         objetos.add(objeto);
     }
 

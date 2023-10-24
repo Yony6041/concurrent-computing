@@ -1,6 +1,6 @@
 package kas.concurrente;
-import kas.concurrente.modelos.Grafica;
-import kas.concurrente.modelos.Vertice; 
+
+import kas.concurrente.modelos.*;
 
 /**
  * Clase Main
@@ -31,7 +31,7 @@ public class Main {
         
     }
 
-    public static Grafica agregaAristas(Grafica g){
+    public static void agregaAristas(Grafica g){
         g.agregaArista(new Arista(g.getVertices()[0], g.getVertices()[1]));
         g.agregaArista(new Arista(g.getVertices()[0], g.getVertices()[5]));
         g.agregaArista(new Arista(g.getVertices()[1], g.getVertices()[2]));

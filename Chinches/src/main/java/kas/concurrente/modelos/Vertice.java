@@ -23,7 +23,9 @@ public class Vertice {
     public Vertice(int i, String facultad) {
         id = i;
         this.facultad = facultad;
-        objetos = new LinkedList<Objeto>();
+        armas = new LinkedList<>();
+        chinches = new LinkedList<>();
+        personas = new LinkedList<>();
     }
 
     /**
@@ -69,5 +71,32 @@ public class Vertice {
      */
     public String getFacultad() {
         return facultad;
+    }
+
+    /**
+     * Regresa la lista de armas en este vertice
+     * 
+     * @return La lista de armas
+     */
+    public LinkedList<Arma> getArmas(){
+        return armas; 
+    }
+
+    /**
+     * Regresa la lista de personas en este vertice
+     * 
+     * @return La lista de personas
+     */
+    public LinkedList<Persona> getPersonas(){
+        return personas; 
+    }
+
+    /**
+     * Regresa la lista de chinches
+     * 
+     * @return La lista de chinches
+     */
+    public LinkedList<Chinche> getChinches(){
+        return chinches; 
     }
 }

@@ -1,15 +1,15 @@
 package kas.concurrente.modelos;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.LinkedList;
 
-public class Grafica {
+/**
+ * Clase que representa una gráfica con vértices y aristas.
+ */
+public class Grafica{
 
     // Atributos para almacenar los vértices y aristas de la gráfica
     protected volatile Vertice[] vertices;
-    protected volatile ArrayList<Arista> aristas;
+    protected volatile LinkedList<Arista> aristas;
 
     /**
      * Constructor de la clase Grafica que inicializa el arreglo de vértices con una capacidad dada.
@@ -34,7 +34,7 @@ public class Grafica {
      * 
      * @return Arreglo de aristas de la gráfica.
      */
-    public Arista[] getAristas() {
+    public LinkedList<Arista> getAristas() {
         return aristas;
     }
 
@@ -44,33 +44,17 @@ public class Grafica {
      * @param vertice Vértice a agregar.
      * @param indice Índice donde se agrega el vértice.
      */
-    public void agregaVertice(Vertice vertice, int indice) {
+    public void agregaVertice(int indice, Vertice vertice) {
         vertices[indice] = vertice;
     }
 
     /**
-     * Agrega una arista a la gráfica en la posición especificada por el índice.
+     * Agrega una arista a la gráfica
      * 
      * @param arista Arista a agregar.
-     * @param indice Índice donde se agrega la arista.
      */
-    public void agregaArista(Arista arista, int indice) {
+    public void agregaArista(Arista arista) {
         aristas.add(arista);
     }
-
-    // Mapa que asocia cada vértice con una lista de aristas salientes.
-    protected Map<Vertice, List<Arista>> aristasSalientes = new HashMap<>();
-
-
-
-    // Método para obtener las aristas salientes de un vértice
-    public List<Arista> obtenerAristasSalientes(Vertice v) {
-        List<Arista> aristasSalientes = new ArrayList<>();
-        for (Arista arista : aristas) {
-            if (arista.getVerticeUno().equals(v)) {
-                aristasSalientes.add(arista);
-            }
-        }
-        return aristasSalientes;
-    }
 }
+

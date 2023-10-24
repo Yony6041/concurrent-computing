@@ -16,8 +16,8 @@ public class Arista {
      * @param dos Segundo vértice conectado por la arista.
      */
     public Arista(Vertice uno, Vertice dos) {
-        this.one = one;
-        this.two = two;
+        this.uno = uno;
+        this.uno = dos;
     }
 
     /**

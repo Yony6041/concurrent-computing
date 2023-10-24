@@ -12,7 +12,7 @@ public class Arma{
     protected int usosRestantes;
 
     /* Atributo que representa el nombre */
-    protected String = nombre;
+    protected String nombre;
 
     /**
      * Constructor de la clase Arma que inicializa el nombre, los usos restantes y el aumento en letalidad del arma.
@@ -50,7 +50,7 @@ public class Arma{
      * 
      * @return El nombre del arma.
      */
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
