@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Clase que representa una wey junta de que?
+ * Clase que representa a las personas
  * 
  * 
  * Persona en la simulación.
@@ -16,6 +16,7 @@ public class Persona{
     protected ArrayList<Arma> armas;
     protected int letalidad;
     protected int vida;  // Asumiendo que una persona también tiene vida como una chinche
+    protected boolean resucita;
 
     /**
      * Constructor de la clase Persona que inicializa el nombre y la letalidad de la persona.
@@ -27,7 +28,8 @@ public class Persona{
         this.nombre = nombre;
         this.letalidad = letalidad;
         this.armas = new ArrayList<Arma>();
-        this.vida = 100;  // Asumiendo una vida inicial de 100
+        vida = 100;  // Asumiendo una vida inicial de 100
+	resucita= true;
     }
 
     /**
@@ -83,4 +85,21 @@ public class Persona{
     public void reducirVida(int cantidad) {
         vida -= cantidad;
     }
+
+    /**
+     * Resucita a la persona y lo señala
+     *
+     * @return un booleano para indicar si se resucito a la persona o no
+     */
+    public boolean resureccion(){
+	boolean res = resucita;
+	resucita = false;
+	if(res){
+	    vida = 100;
+	    System.out.println(nombre + " ha resucitado.");
+	}
+	return res;
+    }
+
+
 }
