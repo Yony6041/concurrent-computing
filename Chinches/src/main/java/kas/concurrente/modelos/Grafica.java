@@ -18,6 +18,7 @@ public class Grafica{
      */
     public Grafica(int capacidad) {
         vertices = new Vertice[capacidad];
+	aristas = new LinkedList<>();
     }
 
     /**
@@ -56,5 +57,5 @@ public class Grafica{
     public void agregaArista(Arista arista) {
         aristas.add(arista);
     }
-}
 
+}
