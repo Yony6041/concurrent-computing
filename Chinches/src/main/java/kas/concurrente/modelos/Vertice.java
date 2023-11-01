@@ -1,6 +1,7 @@
 package kas.concurrente.modelos;
 
 import java.util.LinkedList;
+import java.util.Random;
 
 /**
  * Clase que representa un vértice en una gráfica.
@@ -56,6 +57,15 @@ public class Vertice {
     }
 
     /**
+     * Elimina una chinche al vértice.
+     * 
+     * @param c Chinche a eliminar del vértice.
+     */
+    public void eliminarChinche(Chinche c) {
+        chinches.remove(c);
+    }
+
+    /**
      * Agrega un arma al vértice.
      * 
      * @param a Arma a agregar al vértice.
@@ -98,5 +108,64 @@ public class Vertice {
      */
     public LinkedList<Chinche> getChinches(){
         return chinches; 
+    }
+
+    /**
+     * Obtiene la letalidad de personas ya sea en grupo o si esta solo 
+     *
+     * @return la letalidad de las personas en este vertice.
+     */
+    public int getLetalidadTotalPersonas(){
+	double letalidadTotal = 0;
+	for(int i = 0; i < personas.size(); i++){
+		letalidadTotal = letalidadTotal + personas.get(i).getLetalidad();
+	}
+	if(personas.size() > 1)
+		letalidadTotal = letalidadTotal * .75;
+
+	return (int) Math.round(letalidadTotal);
+    }
+
+    /**
+     * Obtiene la letalidad de chinches en este vertice. 
+     *
+     * @return la letalidad de las chinches en este vertice.
+     */
+    public int getLetalidadTotalChinches(){
+	int letalidadTotal = 0;
+	for(int i = 0; i < chinches.size(); i++)
+		letalidadTotal = letalidadTotal + chinches.get(i).getLetalidad();
+	return letalidadTotal;
+    }
+
+    /**
+     * Metodo para indicar la interaccion entre chinches y humanos
+     *
+     */
+    public void interaccionChincheHumano(){
+	Random random = new Random();
+	int pl = getLetalidadTotalPersonas();
+	int cl = getLetalidadTotalChinches();
+	if(random.nextDouble() < 1 - (pl * ((pl + cl) / 100))){
+		for(Persona p : personas){
+			p.reducirVida((int) Math.round(cl / personas.size()));
+			if(p.getVida() < 1){
+				if(!p.resureccion()){
+					System.out.println(p.getNombre() + " ha muerto sin resureccion.");
+					personas.remove(p);
+				}
+			}
+		}
+	}
+	else{
+		for(Chinche c : chinches){
+			c.reducirVida((int) Math.round(pl / chinches.size()));
+			if(c.getVida() < 1){
+			System.out.println("Se han eliminado una chinche.");	
+			chinches.remove(c);			
+			}
+
+		}
+	}
     }
 }
